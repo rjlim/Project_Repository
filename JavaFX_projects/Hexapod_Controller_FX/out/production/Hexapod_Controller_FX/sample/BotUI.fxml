@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="629.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BotUIController">
+   <children>
+      <AnchorPane layoutX="523.0" layoutY="32.0" prefHeight="40.0" prefWidth="201.0" />
+      <Pane fx:id="ctrlPane" layoutX="16.0" layoutY="227.0" prefHeight="393.0" prefWidth="668.0" stylesheets="@application.css">
+         <children>
+            <GridPane alignment="CENTER" layoutX="14.0" layoutY="34.0" prefHeight="320.0" prefWidth="150.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="50.0" prefWidth="40.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="50.0" prefWidth="40.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="50.0" prefWidth="40.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="28.0" minHeight="22.0" prefHeight="28.0" />
+                <RowConstraints maxHeight="218.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="341.0" minHeight="10.0" prefHeight="175.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="153.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="35.0" valignment="CENTER" vgrow="NEVER" />
+              </rowConstraints>
+               <children>
+                  <Slider fx:id="a1_slider" max="180.0" maxHeight="150.0" maxWidth="40.0" minHeight="150.0" minWidth="40.0" orientation="VERTICAL" prefHeight="150.0" prefWidth="27.0" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Slider>
+                  <Button fx:id="a1_IncrBtn" cache="true" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressIncr_a1" text="▲" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="a1_DecrBtn" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressDncr_a1" text="▼" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <TextField fx:id="a1_tFval" maxHeight="25.0" maxWidth="35.0" minHeight="25.0" minWidth="45.0" stylesheets="@application.css" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Slider fx:id="a2_slider" max="180.0" maxHeight="150.0" maxWidth="40.0" minHeight="150.0" minWidth="40.0" orientation="VERTICAL" prefHeight="150.0" prefWidth="27.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Slider>
+                  <Slider fx:id="a3_slider" max="180.0" maxHeight="150.0" maxWidth="40.0" minHeight="150.0" minWidth="40.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Slider>
+                  <Label text="A1(1)">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="a2_IncrBtn" cache="true" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressIncr_a2" text="▲" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="a2_DecrBtn" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressDncr_a2" text="▼" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button fx:id="a3_IncrBtn" cache="true" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressIncr_a3" text="▲" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button fx:id="a3_DecrBtn" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressDncr_a3" text="▼" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <TextField fx:id="a2_tFval" maxHeight="25.0" maxWidth="35.0" minHeight="25.0" minWidth="45.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="a3_tFval" maxHeight="25.0" maxWidth="35.0" minHeight="25.0" minWidth="45.0" stylesheets="@application.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label text="A2(2)" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="A3(3)" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btonAddSequenceServoA" mnemonicParsing="false" onAction="#onAddSequence_ServoA" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <GridPane alignment="CENTER" layoutX="504.0" layoutY="34.0" prefHeight="320.0" prefWidth="150.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="50.0" prefWidth="40.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="50.0" prefWidth="40.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="50.0" prefWidth="40.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="28.0" minHeight="22.0" prefHeight="28.0" />
+                  <RowConstraints maxHeight="218.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="341.0" minHeight="10.0" prefHeight="175.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="153.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Slider fx:id="d1_slider" max="180.0" maxHeight="150.0" maxWidth="40.0" minHeight="150.0" minWidth="40.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="40.0" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Slider>
+                  <Button fx:id="d1_IncrBtn" cache="true" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressIncr_d1" text="▲" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="d1_DecrBtn" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressDncr_d1" text="▼" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <TextField fx:id="d1_tFval" maxHeight="25.0" maxWidth="35.0" minHeight="25.0" minWidth="45.0" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Slider fx:id="d2_slider" max="180.0" maxHeight="150.0" maxWidth="40.0" minHeight="150.0" minWidth="40.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="40.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Slider>
+                  <Slider fx:id="d3_slider" max="180.0" maxHeight="150.0" maxWidth="40.0" minHeight="150.0" minWidth="40.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Slider>
+                  <Label text="D1(10)">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="d2_IncrBtn" cache="true" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressIncr_d2" text="▲" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="d2_DecrBtn" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressDncr_d2" text="▼" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button fx:id="d3_IncrBtn" cache="true" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressIncr_d3" text="▲" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button fx:id="d3_DecrBtn" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressDncr_d3" text="▼" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <TextField fx:id="d2_tFval" maxHeight="25.0" maxWidth="35.0" minHeight="25.0" minWidth="45.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="d3_tFval" maxHeight="25.0" maxWidth="35.0" minHeight="25.0" minWidth="45.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label text="D2(11)" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="D3(12)" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btonAddSequenceServoD" mnemonicParsing="false" onAction="#onAddSequence_ServoD" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <GridPane alignment="CENTER" layoutX="176.0" layoutY="34.0" prefHeight="320.0" prefWidth="150.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="50.0" prefWidth="40.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="50.0" prefWidth="40.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="50.0" prefWidth="40.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="28.0" minHeight="22.0" prefHeight="28.0" />
+                  <RowConstraints maxHeight="218.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="341.0" minHeight="10.0" prefHeight="175.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="153.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="35.0" valignment="CENTER" vgrow="NEVER" />
+               </rowConstraints>
+               <children>
+                  <Slider fx:id="b1_slider" max="180.0" maxHeight="150.0" maxWidth="40.0" minHeight="150.0" minWidth="40.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="40.0" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Slider>
+                  <Button fx:id="b1_IncrBtn" cache="true" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressIncr_b1" text="▲" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="b1_DecrBtn" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressDncr_b1" text="▼" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <TextField fx:id="b1_tFval" maxHeight="25.0" maxWidth="35.0" minHeight="25.0" minWidth="45.0" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Slider fx:id="b2_slider" max="180.0" maxHeight="150.0" maxWidth="40.0" minHeight="150.0" minWidth="40.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="40.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Slider>
+                  <Slider fx:id="b3_slider" max="180.0" maxHeight="150.0" maxWidth="40.0" minHeight="150.0" minWidth="40.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Slider>
+                  <Label text="B1(4)">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="b2_IncrBtn" cache="true" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressIncr_b2" text="▲" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="b2_DecrBtn" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressDncr_b2" text="▼" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button fx:id="b3_IncrBtn" cache="true" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressIncr_b3" text="▲" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button fx:id="b3_DecrBtn" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressDncr_b3" text="▼" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <TextField fx:id="b2_tFval" maxHeight="25.0" maxWidth="35.0" minHeight="25.0" minWidth="45.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="b3_tFval" maxHeight="25.0" maxWidth="35.0" minHeight="25.0" minWidth="45.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label text="B2(5)" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="B3(6)" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btonAddSequenceServoB" mnemonicParsing="false" onAction="#onAddSequence_ServoB" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <GridPane alignment="CENTER" layoutX="340.0" layoutY="34.0" prefHeight="320.0" prefWidth="150.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="50.0" prefWidth="40.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="50.0" prefWidth="40.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="50.0" prefWidth="40.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="28.0" minHeight="22.0" prefHeight="28.0" />
+                  <RowConstraints maxHeight="218.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="341.0" minHeight="10.0" prefHeight="175.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="153.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Slider fx:id="c1_slider" max="180.0" maxHeight="150.0" maxWidth="40.0" minHeight="150.0" minWidth="40.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="40.0" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Slider>
+                  <Button fx:id="c1_IncrBtn" cache="true" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressIncr_c1" text="▲" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="c1_DecrBtn" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressDncr_c1" text="▼" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <TextField fx:id="c1_tFval" maxHeight="25.0" maxWidth="35.0" minHeight="25.0" minWidth="45.0" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Slider fx:id="c2_slider" max="180.0" maxHeight="150.0" maxWidth="40.0" minHeight="150.0" minWidth="40.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="40.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Slider>
+                  <Slider fx:id="c3_slider" max="180.0" maxHeight="150.0" maxWidth="40.0" minHeight="150.0" minWidth="40.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Slider>
+                  <Label text="C1(7)">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="c2_IncrBtn" cache="true" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressIncr_c2" text="▲" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="c2_DecrBtn" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressDncr_c2" text="▼" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button fx:id="c3_IncrBtn" cache="true" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressIncr_c3" text="▲" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button fx:id="c3_DecrBtn" maxHeight="25.0" maxWidth="30.0" minHeight="25.0" minWidth="30.0" mnemonicParsing="false" onAction="#btnPressDncr_c3" text="▼" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <TextField fx:id="c2_tFval" maxHeight="25.0" maxWidth="35.0" minHeight="25.0" minWidth="45.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="c3_tFval" maxHeight="25.0" maxWidth="35.0" minHeight="25.0" minWidth="45.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label text="C2(8)" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="C3(9)" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btonAddSequenceServoC" mnemonicParsing="false" onAction="#onAddSequence_ServoC" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <Label layoutX="296.0" layoutY="14.0" text="Servo Control " />
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <Blend mode="RED" />
+         </effect>
+      </Pane>
+      <Pane fx:id="SerialPortPane" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="668.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <ComboBox fx:id="portName" layoutX="99.0" layoutY="57.0" prefHeight="26.0" prefWidth="163.0" promptText="Select Port" />
+            <ComboBox fx:id="cboxBaud" layoutX="99.0" layoutY="100.0" prefHeight="26.0" prefWidth="163.0" promptText="Select BAUD Rate" />
+            <ComboBox fx:id="cboxDataBit" layoutX="99.0" layoutY="141.0" prefHeight="26.0" prefWidth="163.0" promptText="Select Data Bit" />
+            <ComboBox fx:id="cboxStopBit" layoutX="404.0" layoutY="100.0" onAction="#stopBitIsSelected" prefHeight="26.0" prefWidth="163.0" promptText="Select Stop Bit" />
+            <ComboBox fx:id="cboxParityBit" layoutX="404.0" layoutY="57.0" onAction="#parityBitIsSelected" prefHeight="26.0" prefWidth="163.0" promptText="Select Parity Bit" />
+            <Label layoutX="249.0" layoutY="20.0" text="Serial Port Settings" />
+            <ToggleButton fx:id="togbtn" layoutX="467.0" layoutY="141.0" mnemonicParsing="false" onAction="#toggleBtn" prefHeight="26.0" prefWidth="98.0" text="Connect" />
+            <Label layoutX="16.0" layoutY="61.0" text="Port Name :" />
+            <Label layoutX="16.0" layoutY="104.0" text="BAUD Rate :" />
+            <Label layoutX="16.0" layoutY="145.0" text="Data Bit :" />
+            <Label layoutX="337.0" layoutY="104.0" text="Stop bit :" />
+            <Label layoutX="334.0" layoutY="61.0" text="Parity bit :" />
+            <Label layoutX="335.0" layoutY="145.0" prefHeight="16.0" prefWidth="133.0" text="Connection status :" />
+         </children>
+      </Pane>
+      <Pane layoutX="707.0" layoutY="21.0" prefHeight="588.0" prefWidth="331.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <TextArea fx:id="TerminalTextArea" layoutX="10.0" layoutY="38.0" prefHeight="183.0" prefWidth="312.0" />
+            <TextField fx:id="tf_SendData" layoutX="11.0" layoutY="234.0" prefHeight="26.0" prefWidth="246.0" />
+            <Button layoutX="259.0" layoutY="234.0" mnemonicParsing="false" onAction="#onSendData" prefHeight="26.0" prefWidth="64.0" text="Send" />
+            <Label layoutX="125.0" layoutY="14.0" text="Terminal" />
+            <TextArea fx:id="TA_Sequence" layoutX="10.0" layoutY="286.0" prefHeight="238.0" prefWidth="312.0" />
+            <Button layoutX="259.0" layoutY="538.0" mnemonicParsing="false" onAction="#onSendSequence" prefHeight="25.0" prefWidth="64.0" text="Send" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

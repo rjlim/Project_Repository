@@ -1,0 +1,42 @@
+
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+
+.root{
+	
+	-fx-background-color: grey
+}
+
+
+
+.slider , .axis, .axis-tick-mark, .axis-minor-tick-mark {
+
+	-fx-show-tick-marks:true ;
+	-fx-major-tick-unit: 30;
+	-fx-stroke:blue;
+	-fx-tick-length:5px ;
+	-fx-show-tick-labels:true;
+	-fx-tick-label-fill:blue;
+
+
+	
+}
+#ctrlPane{
+	-fx-background-color: lightgrey
+	 
+	
+}
+#SerialPortPane{
+	-fx-background-color: lightgrey
+	 
+	
+}
+.button{
+	
+	-fx-text-fill:blue;
+}
+.textfield{
+	-fx-background-color: Black;
+	-fx-text-fill: #83f52c;
+}
