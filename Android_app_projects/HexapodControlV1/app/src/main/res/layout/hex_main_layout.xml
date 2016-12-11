@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        tools:context="com.example.pc01.hexapodcontrolv1.HexMainCtrl" android:background="#ffffff">
+
+    <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bluetooth Enable :"
+            android:id="@+id/sw_enableBt"
+            android:checked="false"
+            android:textSize="15dp"
+            android:layout_below="@+id/spn_pairedDevice" android:layout_alignStart="@+id/spn_pairedDevice"
+            android:layout_alignEnd="@+id/spn_pairedDevice" android:layout_alignLeft="@+id/spn_pairedDevice"
+            android:layout_alignRight="@+id/spn_pairedDevice"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Paired devices :"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spn_pairedDevice" android:layout_below="@+id/textView"
+            android:layout_alignEnd="@+id/textView" android:layout_alignStart="@+id/textView"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Connection Status"
+            android:id="@+id/textView2" android:layout_below="@+id/sw_enableBt" android:layout_alignStart="@+id/sw_enableBt"
+            android:layout_alignEnd="@+id/sw_enableBt"/>
+    <Switch android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Disconnected  "
+            android:id="@+id/sw_disConnect_bt" android:checked="false" android:textSize="15dp"
+            android:layout_below="@+id/textView2" android:layout_alignStart="@+id/textView2"
+            android:layout_alignEnd="@+id/textView2"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text=" Selected Device:"
+            android:id="@+id/textView3"
+            android:layout_alignParentTop="true" android:layout_toEndOf="@+id/textView"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="No current device selected"
+            android:id="@+id/tv_selectedDevice"
+            android:layout_above="@+id/spn_pairedDevice" android:layout_toEndOf="@+id/textView3"/>
+
+    <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="350dp"
+            android:id="@+id/relativeLayout"
+            android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
+            android:layout_above="@+id/frameLayout" android:layout_alignStart="@+id/frameLayout">
+        <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinLegSegment" android:layout_alignParentTop="true"
+                android:layout_alignBottom="@+id/textView4" android:layout_toEndOf="@+id/textView4"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Select Leg :"
+                android:id="@+id/textView4" android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"/>
+        <com.example.pc01.hexapodcontrolv1.VertSeekBar
+                android:id="@+id/vseekA"
+                android:layout_width="32dp"
+                android:layout_height="200dp"
+
+                android:max="4"
+                android:progress="2"
+                android:indeterminate="false"
+                android:layout_below="@+id/tvDispAngleA" android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/vseekB" android:layout_toStartOf="@+id/vseekB"/>
+        <com.example.pc01.hexapodcontrolv1.VertSeekBar
+                android:id="@+id/vseekB"
+                android:layout_width="32dp"
+                android:layout_height="200dp"
+
+                android:max="4"
+                android:progress="2"
+                android:indeterminate="false"
+                android:layout_below="@+id/tvDispAngleB" android:layout_alignStart="@+id/tvDispAngleB"
+                android:layout_toLeftOf="@+id/tvDispAngleC" android:layout_toStartOf="@+id/tvDispAngleC"/>
+        <com.example.pc01.hexapodcontrolv1.VertSeekBar
+                android:id="@+id/vseekC"
+                android:layout_width="32dp"
+                android:layout_height="200dp"
+
+                android:max="4"
+                android:progress="2"
+                android:indeterminate="false"
+                android:layout_above="@+id/btnIncB" android:layout_alignRight="@+id/tvDispAngleC"
+                android:layout_alignEnd="@+id/tvDispAngleC"/>
+        <TextView
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="S1"
+                android:id="@+id/servNumA"
+                android:layout_below="@+id/textView4" android:layout_alignParentStart="true"/>
+        <TextView android:layout_width="38dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S2"
+                  android:id="@+id/servNumB"
+                  android:layout_below="@+id/spinLegSegment" android:layout_toEndOf="@+id/servNumA"/>
+        <TextView android:layout_width="38dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S3"
+                  android:id="@+id/servNumC"
+                  android:layout_below="@+id/spinLegSegment" android:layout_toEndOf="@+id/servNumB"/>
+        <TextView android:layout_width="38dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="180"
+                  android:id="@+id/tvDispAngleA"
+                  android:layout_below="@+id/servNumA" android:layout_alignParentStart="true"
+                  android:textColor="#22ed2f" android:background="#000000"/>
+        <TextView android:layout_width="38dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="180"
+                  android:id="@+id/tvDispAngleB"
+                  android:textColor="#22ed2f" android:background="#000000" android:layout_below="@+id/servNumA"
+                  android:layout_toEndOf="@+id/servNumA"/>
+        <TextView android:layout_width="38dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="180"
+                  android:id="@+id/tvDispAngleC" android:textColor="#22ed2f" android:background="#000000"
+                  android:layout_below="@+id/servNumC" android:layout_alignStart="@+id/servNumC"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset Position"
+                android:id="@+id/btnRstPos"
+                android:layout_alignParentTop="true" android:layout_toEndOf="@+id/txVs1"/>
+        <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="▲"
+                android:id="@+id/btnIncA"
+                android:layout_below="@+id/vseekA" android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/btnDecrA"/>
+        <Button style="?android:attr/buttonStyleSmall" android:layout_width="40dp"
+                android:layout_height="40dp" android:text="▼" android:id="@+id/btnDecrA"
+                android:layout_below="@+id/btnIncA" android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/tvDispAngleA"/>
+        <Button style="?android:attr/buttonStyleSmall" android:layout_width="40dp" android:layout_height="40dp"
+                android:text="▲" android:id="@+id/btnIncB"
+                android:layout_alignStart="@+id/vseekB"
+                android:layout_toStartOf="@+id/tvDispAngleC" android:layout_below="@+id/vseekB"/>
+        <Button style="?android:attr/buttonStyleSmall" android:layout_width="40dp" android:layout_height="40dp"
+                android:text="▼" android:id="@+id/btnDecrB"
+                android:layout_below="@+id/btnIncB" android:layout_alignStart="@+id/btnIncB"
+                android:layout_alignEnd="@+id/btnIncB"/>
+        <Button style="?android:attr/buttonStyleSmall" android:layout_width="40dp" android:layout_height="40dp"
+                android:text="▲" android:id="@+id/btnIncC"
+                android:layout_above="@+id/btnDecrB" android:layout_alignStart="@+id/vseekC"
+                android:layout_below="@+id/vseekC"/>
+        <Button style="?android:attr/buttonStyleSmall" android:layout_width="40dp" android:layout_height="40dp"
+                android:text="▼" android:id="@+id/btnDecrC"
+                android:layout_alignTop="@+id/btnDecrB" android:layout_alignStart="@+id/btnIncC"/>
+        <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="S1: 180"
+                android:id="@+id/txVs1"
+                android:layout_below="@+id/tvDispAngleC" android:layout_centerHorizontal="true"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S2: 180"
+                  android:id="@+id/txVs2"
+                  android:layout_below="@+id/tvDispAngleC" android:layout_toEndOf="@+id/txVs1"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S3: 180"
+                  android:id="@+id/txVs3"
+                  android:layout_alignTop="@+id/txVs2" android:layout_toEndOf="@+id/txVs2"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S4: 180"
+                  android:id="@+id/txVs4"
+                  android:layout_below="@+id/txVs1" android:layout_alignStart="@+id/txVs1"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S5: 180"
+                  android:id="@+id/txVs5"
+                  android:layout_alignTop="@+id/txVs4" android:layout_toEndOf="@+id/txVs4"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S6: 180"
+                  android:id="@+id/txVs6"
+                  android:layout_alignTop="@+id/txVs5" android:layout_toEndOf="@+id/txVs5"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S7: 180"
+                  android:id="@+id/txVs7"
+                  android:layout_below="@+id/txVs4" android:layout_alignStart="@+id/txVs4"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S8: 180"
+                  android:id="@+id/txVs8"
+                  android:layout_below="@+id/txVs4" android:layout_toEndOf="@+id/txVs4"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S9: 180"
+                  android:id="@+id/txVs9"
+                  android:layout_below="@+id/txVs6" android:layout_toEndOf="@+id/txVs5"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S10: 180"
+                  android:id="@+id/txVs10" android:layout_below="@+id/txVs7" android:layout_alignStart="@+id/txVs7"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S11: 180"
+                  android:id="@+id/txVs11" android:layout_alignTop="@+id/txVs10"
+                  android:layout_toEndOf="@+id/txVs10"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S12: 180"
+                  android:id="@+id/txVs12" android:layout_alignTop="@+id/txVs11"
+                  android:layout_toEndOf="@+id/txVs11"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S13: 180"
+                  android:id="@+id/txVs13" android:layout_below="@+id/txVs10"
+                  android:layout_alignStart="@+id/txVs10"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S14: 180"
+                  android:id="@+id/txVs14" android:layout_alignTop="@+id/txVs13"
+                  android:layout_toEndOf="@+id/txVs13"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S15: 180"
+                  android:id="@+id/txVs15" android:layout_alignTop="@+id/txVs14"
+                  android:layout_toEndOf="@+id/txVs14"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S16: 180"
+                  android:id="@+id/txVs16" android:layout_below="@+id/txVs13"
+                  android:layout_alignStart="@+id/txVs13"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S17: 180"
+                  android:id="@+id/txVs17"
+                  android:layout_below="@+id/txVs13" android:layout_toEndOf="@+id/txVs13"/>
+        <TextView android:layout_width="75dp" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="S18: 180"
+                  android:id="@+id/txVs18" android:layout_below="@+id/txVs15" android:layout_toEndOf="@+id/txVs14"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true" android:layout_below="@+id/txVs16"
+                android:layout_alignStart="@+id/txVs16" android:weightSum="1"
+                android:layout_alignBottom="@+id/btnDecrC">
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" android:layout_weight="0.15"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Throttle"
+                    android:id="@+id/textView8" android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.15"/>
+            <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="▲"
+                    android:id="@+id/btn_Throt_Up" android:layout_gravity="center_horizontal" android:layout_weight="0.15"/>
+            <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="5"
+                    android:id="@+id/txV_Throt_Val" android:layout_weight="0.15"
+                    android:layout_gravity="center_horizontal" android:textAlignment="center"/>
+            <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="▼"
+                    android:id="@+id/btn_Throt_Dwn" android:layout_gravity="center_horizontal" android:layout_weight="0.15"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout
+            android:layout_width="420dp"
+            android:layout_height="250dp"
+            android:id="@+id/frameLayout" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true">
+        <Button
+                android:layout_width="117dp"
+                android:layout_height="80dp"
+                android:text="  -=FWD=-  "
+                android:id="@+id/btnFWD" android:layout_gravity="center_horizontal|top"
+                android:layout_centerVertical="true" android:layout_alignEnd="@+id/sw_disConnect_bt"/>
+        <Button android:layout_width="117dp" android:layout_height="80dp" android:text="  -=REV=-  "
+                android:id="@+id/btnREV" android:layout_gravity="center_horizontal|bottom"
+                android:layout_centerVertical="true" android:layout_alignEnd="@+id/sw_disConnect_bt"/>
+        <Button android:layout_width="117dp" android:layout_height="80dp" android:text="  -=STOP=-  "
+                android:id="@+id/btnSTOP" android:layout_gravity="center"
+                android:layout_centerVertical="true" android:layout_alignEnd="@+id/sw_disConnect_bt"/>
+        <Button android:layout_width="117dp" android:layout_height="80dp" android:text="  -=RIGHT=-  "
+                android:id="@+id/btnRIGHT" android:layout_gravity="right|center_vertical"
+                android:layout_centerVertical="true" android:layout_alignEnd="@+id/sw_disConnect_bt"/>
+        <Button android:layout_width="117dp" android:layout_height="80dp" android:text="  -=LEFT=-  "
+                android:id="@+id/btnLEFT" android:layout_gravity="left|center_vertical"
+                android:layout_centerVertical="true" android:layout_alignEnd="@+id/sw_disConnect_bt"/>
+    </FrameLayout>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Battery Status"
+            android:id="@+id/textView5" android:layout_below="@+id/textView3" android:layout_alignEnd="@+id/textView3"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Cell No. 1:"
+            android:id="@+id/textView6" android:layout_below="@+id/textView5"
+            android:layout_alignStart="@+id/textView5"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:textAppearance="?android:attr/textAppearanceMedium" android:text="Cell No. 2:"
+              android:id="@+id/textView7"
+              android:layout_below="@+id/textView6" android:layout_alignStart="@+id/textView6"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="4.0 V"
+
+            android:id="@+id/tv_Cell1"
+            android:layout_below="@+id/textView5" android:layout_toEndOf="@+id/textView6"
+            android:layout_above="@+id/textView7" android:background="#000000" android:textColor="#45ff02"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:text="4.0 V"
+
+              android:id="@+id/tv_Cell2"
+              android:layout_alignTop="@+id/textView7" android:layout_alignStart="@+id/tv_Cell1"
+              android:background="#000000" android:textColor="#45ff02"/>
+
+</RelativeLayout>
